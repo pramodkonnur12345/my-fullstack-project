@@ -1,0 +1,23 @@
+<p>dashboard-component works!</p>
+
+<h2>Dashboard</h2>
+
+<p>Operator: {{ operator.opname }} ({{ operator.type }})</p>
+
+<zxing-scanner
+  [formats]="allowedFormats"
+  (scanSuccess)="onScanSuccess($event)">
+</zxing-scanner>
+<input [(ngModel)]="scanInput" placeholder="Scan QR / Enter partcode" />
+<button (click)="scan()">Scan</button>
+
+<hr>
+
+
+
+<ul>
+  <li *ngFor="let p of products">
+    {{ p.partcode }}
+    <span *ngIf="p.scanned">✅</span>
+  </li>
+</ul>

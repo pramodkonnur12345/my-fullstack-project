@@ -1,0 +1,19 @@
+<p>products works!</p>
+<h2>Products ({{ operator?.type }})</h2>
+
+<div class="product-container">
+  <div class="card" *ngFor="let p of products">
+
+     <img 
+      [src]="'data:image/png;base64,' + p.qrImage"
+      (click)="openQR(p.qrImage)"
+      class="qr-thumb"
+    />
+
+    <h3>{{ p.partcode }}</h3>
+    <p><b>Name:</b> {{ p.prodname }}</p>
+    <p><b>Type:</b> {{ p.type }}</p>
+   
+
+  </div>
+</div>

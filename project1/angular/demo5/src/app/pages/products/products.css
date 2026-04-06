@@ -1,0 +1,58 @@
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+/* QR Thumbnail */
+.qr-thumb {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.qr-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* Modal Background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Large QR */
+.qr-large {
+  width: 1300px;
+  height: 1300px;
+}

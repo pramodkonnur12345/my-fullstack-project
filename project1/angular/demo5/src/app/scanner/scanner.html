@@ -1,0 +1,20 @@
+<p>scanner works!</p>
+<div style="text-align:center">
+  <h2>Scan QR Code</h2>
+
+  <!--
+<zxing-scanner
+  [device]="currentDevice"
+   (camerasFound)="onCamerasFound($event)" 
+  (scanSuccess)="handleQrCodeResult($event)">
+</zxing-scanner> 
+-->
+
+<zxing-scanner
+  (scanSuccess)="handleQrCodeResult($event)">
+</zxing-scanner> 
+
+  <p *ngIf="scannedResult">
+    Result: {{ scannedResult }}
+  </p>
+</div>

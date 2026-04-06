@@ -1,0 +1,14 @@
+.login-box, .scanner-box {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 16px;
+}
+
+h3 {
+  color: green;
+}
